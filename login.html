@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+  <div class="container">
+    <form action="" method="POST" class="form">
+      <div>
+        <span id="userName">YOUR USERNAME</span>
+      </div>
+      <div class="form__input-box">
+        <input class="form__input" type="text" placeholder="Input your username" onfocus="add1(), this.placeholder=''"
+          onblur="remove1(), this.placeholder='Input your username'" required>
+      </div>
+      <div>
+        <span id="passWord">YOUR PASSWORD</span>
+      </div>
+      <div class="form__input-box">
+        <input class="form__input" id="passwordShow" type="password" placeholder="Input your password"
+          onfocus="add2(), this.placeholder=''" onblur="remove2(), this.placeholder='Input your password'" id="inp1"
+          required>
+        <span>
+          <i class="fa fa-eye" onmousedown="changePassFormat()" onmouseup="returnPass()" id="see"></i>
+        </span>
+      </div>
+      <div class="form__input-box">
+        <span><input class="form__input" class="btn" type="submit" value="login" /> </span>
+        <a href="signup.html"><input class="form__input" class="btn" type="button" value="Sign Up" /></span></a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    var user = document.getElementById("userName")
+    var pass = document.getElementById("passWord")
+    var password = document.getElementById("passwordShow")
+
+    function add1() {
+      user.style.visibility = "visible"
+    }
+
+    function remove1() {
+      user.style.visibility = "hidden"
+    }
+
+    function add2() {
+      pass.style.visibility = "visible"
+    }
+
+    function remove2() {
+      pass.style.visibility = "hidden"
+    }
+
+    function changePassFormat() {
+      password.setAttribute("type", "text")
+    }
+
+    function returnPass() {
+      password.setAttribute("type", "password")
+
+    }
+  </script>
+  <script src="javascript/all.js"></script>
+
+</body>
+
+</html>

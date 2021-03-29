@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+body {
+    box-sizing: border-box;
+    background: url("../images/Abract01.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
+
+.container{
+    display: inline-block;
+    width: 20rem;
+    height: 15rem;
+    padding: 1em;
+    border-radius: 0.8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 2rem 2.5rem rgba(15, 59, 54, 0.452);
+}
+.header{
+    margin-bottom: 1rem;
+}
+.form{
+    margin: auto;
+    width: 75%;
+}
+
+.form__input-box:not(:last-child){
+    margin-bottom: 0.2em;
+}
+
+.form__input-box:last-child{
+    display: flex;
+}
+.form__input-box:last-child  .form__input:last-child{
+    margin-left: 0.4rem;
+    margin-right: 2rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.form__input{
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-bottom: solid 0.2rem;
+    margin: none;
+    color: black;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    overflow: hidden;
+}
+#passWord, #userName{
+    visibility: hidden;
+    height: 1rem;
+    padding: 0;
+    margin: 0;
+}
+.fa-eye{
+    position: relative;
+    top:-2rem;
+    right: -12rem
+}
+.btn{
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    color: black;
+    padding: 0.8rem;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    visibility: hidden;
+}

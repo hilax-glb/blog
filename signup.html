@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Sign Up</h2>
+            <p>Please fill in this form to create an account!</p>
+        </div>
+        <form action="" method="POST" class="form">
+            <div class="form__input-box">
+                <input type="text" class="form__input" placeholder="First name" required>
+                <input type="text" class="form__input" placeholder="Last name" required>
+            </div>
+            <div class="form__input-box">
+                <input type="email" class="form__input" placeholder="Name@email.com" required>
+            </div>
+            <div class="form__input-box">
+                <input type="password" class="form__input" placeholder="Password" id="inp1" required>
+            </div>
+            <div class="form__input-box">
+                <input type="password" class="form__input" placeholder="Re-enter password" id="inp2"
+                    onkeyup="checking()" required>
+            </div>
+            <span id="errorMessage" style="color: red;"></span>
+            <div>
+                <input class="btn" id="btn1" type="submit" value="SIGN UP"/>
+            </div>
+            
+        </form>
+    </div>
+    <script>
+        function checking() {
+            var inp1 = document.getElementById("inp1").value
+            var inp2 = document.getElementById("inp2").value
+            var btn1 = document.getElementById("btn1")
+            if (inp1 === inp2) {
+                btn1.style.visibility="visible"
+                document.getElementById("errorMessage").innerHTML=""
+            }else{
+                document.getElementById("errorMessage").innerHTML="The Two Password Feilds Must MATCH To Submit Form"
+                btn1.style.visibility="hidden" 
+            }
+        }
+    </script>
+</body>
+
+</html>
